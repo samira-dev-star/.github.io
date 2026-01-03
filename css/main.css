@@ -1,0 +1,90 @@
+:root {
+  --bg: #0e0f13;
+  --bg-alt: #14161c;
+  --text: #e7e9ee;
+  --muted: #b7bdc9;
+  --primary: #7c5cff;
+  --ring: #44d1a8;
+  --card: #1a1d24;
+  --border: #262a33;
+}
+
+* { box-sizing: border-box }
+html, body { scroll-behavior: smooth }
+body {
+  margin: 0; font-family: 'Vazirmatn', system-ui;
+  color: var(--text); background: var(--bg);
+}
+
+.nav {
+  position: sticky; top: 0; backdrop-filter: blur(8px);
+  background: rgba(14,15,19,.6); border-bottom: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; z-index: 50;
+}
+.nav a { color: var(--text); text-decoration: none; margin: 0 10px }
+.logo { font-weight: 800 }
+
+.hero {
+  min-height: 68vh; display: grid; grid-template-columns: 1.2fr .8fr;
+  align-items: center; gap: 24px; padding: 48px 20px;
+}
+.hero__content h1 { font-size: clamp(28px, 5vw, 48px); margin: 0 0 12px }
+.hero__content p { color: var(--muted); margin: 0 0 20px }
+.btn { display: inline-block; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--border); color: var(--text) }
+.btn.primary { background: var(--primary); border-color: transparent }
+.btn.ghost { background: transparent }
+.btn.small { padding: 8px 12px; font-size: .9rem }
+.btn.tiny { padding: 6px 10px; font-size: .8rem }
+
+.hero__orbit svg { width: 100%; height: auto }
+.ring { fill: none; stroke: var(--ring); stroke-width: 2; opacity: .7; animation: spin 18s linear infinite }
+.ring--2 { stroke: var(--primary); opacity: .5; animation-duration: 26s }
+@keyframes spin { from { transform: rotate(0deg); transform-origin: 50% 50% } to { transform: rotate(360deg); transform-origin: 50% 50% } }
+
+.section { padding: 56px 20px }
+.section.alt { background: var(--bg-alt) }
+.section__head { max-width: 900px; margin: 0 auto 24px }
+.section__head h2 { margin: 0 0 8px; font-size: clamp(22px, 3.5vw, 32px) }
+.section__head p { color: var(--muted); margin: 0 }
+
+.grid {
+  display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; max-width: 1100px; margin: 0 auto;
+}
+.cards > .card { grid-column: span 12; background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 1.2fr 1fr }
+.card__media { background: #0b0d12 }
+.card__media video, .card__media img { width: 100%; height: 100%; display: block; object-fit: cover }
+.card__body { padding: 16px }
+.card__body h3 { margin: 0 0 8px }
+.card__body p { color: var(--muted); margin: 0 0 12px }
+.tags span { display: inline-block; background: #232733; color: var(--muted); padding: 4px 8px; border-radius: 999px; margin: 0 8px 8px 0; font-size: .85rem }
+.actions { display: flex; gap: 8px }
+
+.thumb { min-height: 180px; background: linear-gradient(135deg,#232733,#1a1d24) }
+.shimmer { position: relative; overflow: hidden }
+.shimmer::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
+  transform: translateX(-100%); animation: shimmer 2.6s infinite;
+}
+@keyframes shimmer { 50% { transform: translateX(0) } 100% { transform: translateX(100%) } }
+
+.timeline { max-width: 900px; margin: 0 auto; border-left: 2px solid var(--border); padding-left: 24px }
+.tl-item { position: relative; margin-bottom: 24px }
+.tl-dot { position: absolute; left: -10px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 4px rgba(124,92,255,.2) }
+.tl-date { color: var(--muted); font-size: .9rem; margin-top: 8px }
+
+.contact { max-width: 600px; margin: 0 auto; display: grid; gap: 12px }
+.contact label { display: grid; gap: 6px }
+.contact input, .contact textarea {
+  background: #0e1016; color: var(--text); border: 1px solid var(--border);
+  padding: 10px 12px; border-radius: 10px;
+}
+
+.socials { max-width: 600px; margin: 16px auto 0; display: flex; gap: 12px }
+.footer { border-top: 1px solid var(--border); padding: 20px; text-align: center; color: var(--muted) }
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .cards > .card { grid-template-columns: 1fr; }
+}
