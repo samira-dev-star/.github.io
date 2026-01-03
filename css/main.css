@@ -16,12 +16,7 @@ body {
   color: var(--text); background: var(--bg);
 }
 
-.orbit-container {
-  position: relative;
-  width: 200px;   /* همان اندازه viewBox */
-  height: 200px;
-  margin: auto;   /* وسط صفحه */
-}
+
 
 .orbit {
   width: 100%;
