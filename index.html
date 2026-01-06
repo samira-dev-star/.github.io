@@ -1,356 +1,422 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html lang="de" dir="ltr" data-lang="de">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sam | Portfolio Animation & Programmierung</title>
-  <meta name="description" content="Animationen, Programmierprojekte und professionelle Zertifikate von Sam." />
+  <title>Samira Mashti Zadeh</title>
+  <meta name="description"
+    content="Animationen, Programmierprojekte und professionelle Zertifikate von Samira Mashti Zadeh." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="./images/main/favicon.png" type="image/png">
 </head>
+
 <body>
   <header class="nav">
-    <!-- <a class="logo" href="#">Sam</a> -->
-    <img src="images\main\Copilot_20260104_012822(1).png" alt="logo" class="logo">
-    <nav>
-      <a href="#hero">Start</a>
-      <a href="#animations">Animationen und Design</a>
-      <a href="#projects">Programmierungsprojekte</a>
-      <a href="#certs">Zertifikate</a>
-      <a href="#contact">Kontakt</a>
-      <a href="#about">Über mich</a>
+    <img src="images/main/lego.png" alt="logo" class="logo">
+
+    <!-- دکمه همبرگر منو برای موبایل -->
+    <button class="mobile-menu-toggle" aria-label="Menu" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Overlay برای پس‌زمینه -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ID اضافه شد -->
+    <nav id="mainNav">
+      <a href="#hero" data-i18n="nav.home">Start</a>
+      <a href="#about" data-i18n="nav.about">Über mich</a>
+      <a href="#animations" data-i18n="nav.animations">Animationen</a>
+      <a href="#projects" data-i18n="nav.projects">Projekte</a>
+      <a href="#certs" data-i18n="nav.certs">Zertifikate</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+      <a href="">
+      <button id="langBtn" class="btn ghost" data-i18n="nav.lang" data-lang="en">🌐 EN</button>
+      </a>
     </nav>
   </header>
 
   <section id="hero" class="hero">
     <div class="hero__content">
-      <h1>Visuelle Erlebnisse & sauberes Coding</h1>
-      <p>Kombination aus Kreativität in Animation und Kompetenz in Softwareentwicklung.</p>
+      <h2 class="hero__name">Samira Mashti Zadeh</h2>
+      <h1 data-i18n="hero.title">Visuelle Erlebnisse & sauberes Coding</h1>
+      <p data-i18n="hero.subtitle">Kombination aus Kreativität in Animation und Kompetenz in Softwareentwicklung.</p>
       <div class="hero__cta">
-        <a class="btn primary" href="#projects">Projekte ansehen</a>
-        <a class="btn ghost" href="#animations">Animationen ansehen</a>
+        <a class="btn primary" href="#projects" data-i18n="hero.cta.projects">Projekte ansehen</a>
+        <a class="btn ghost" href="#animations" data-i18n="hero.cta.animations">Animationen ansehen</a>
+        <a class="btn ghost" href="https://github.com/samira-dev-star" target="_blank" rel="noopener"
+          data-i18n="hero.cta.github">GitHub Profil</a>
       </div>
     </div>
     <div class="hero__orbit">
-      <!-- Leichte SVG-Animationsringe -->
       <svg viewBox="0 0 300 300" aria-hidden="true">
         <circle cx="100" cy="100" r="100" class="ring"></circle>
         <circle cx="100" cy="100" r="120" class="ring ring--2"></circle>
       </svg>
-      <img src="images\main\generated_image_e30cc24a-19c9-4249-b5d2-f9bd4463ee54(1).png" alt="Samira Mashti Zadeh" class="imgp">
+      
     </div>
   </section>
 
-<section id="animations" class="section">
-  <div class="section__head">
-    <h2>Animationen</h2>
-    <p>Motion Graphics, Webanimationen und leichte Interaktionen.</p>
-  </div>
+  <section id="about" class="section alt about-section">
+    <div class="about-photo">
+        <img src="images/main/personal-photo.png" alt="Samira Mashti Zadeh" class="personal-photo">
+    </div>
+    <div class="section__head">
+      <h2 data-i18n="about.title">Über mich</h2>
+      <p class="about-subtitle" data-i18n="about.subtitle">Full-Stack Developer · 3D Animator</p>
+    </div>
+  
+    <div class="about-content">
+      <div class="about-text">
+        <p class="about-main-text" data-i18n="about.main_text">
+          Ich bin <strong>Samira Mashti Zadeh</strong>, eine leidenschaftliche Entwicklerin mit Fokus auf <span
+            class="highlight">Full-Stack Entwicklung</span> und <span class="highlight">immersive 3D-Erlebnisse</span>.
+          Mit einem soliden Hintergrund in Softwareentwicklung und einem kreativen Auge für Animation verbinde ich
+          Technologie und Kunst, um innovative Lösungen zu schaffen.
+        </p>
+        <p class="about-secondary-text" data-i18n="about.secondary_text">
+          Meine Reise begann mit der Automatisierung komplexer Prozesse und führte zur Entwicklung von <strong>Scalable
+            Web Applications</strong> und interaktiven 3D-Erfahrungen, die Grenzen verschieben.
+        </p>
+      </div>
 
-  <div class="grid cards">
-    <!-- Video 1 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\202511181913(1).mp4" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>MotorGirl-Animation</h3>
-        <p>Ich habe diese Animation mit der BlenderApp erstellt.</p>
-        <div class="tags"><span>Design</span><span>Animation</span></div>
-      </div>
-    </article>
+    </div>
+  </section>
 
-    <!-- Video 2 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\video0000-0250.mkv" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>Abstract Art</h3>
-        <p>In diesem Video, habe ich dieses animierte Mädchen zum Testen erstellt..</p>
-        <div class="tags"><span>Motion</span><span>Kunst</span></div>
-      </div>
-    </article>
-
-    <!-- Video 3 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\video check0001-0078.mkv" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>Interaktives Design</h3>
-        <p> In diesem Video, Dieses animirte Mädchen ist Laufen.</p>
-        <div class="tags"><span>BlenderApp</span><span>Interaktion</span></div>
-      </div>
-    </article>
-  </div>
-
-  <!-- Mehr anzeigen Button -->
-  <div class="more-btn-container">
-    <a href="morevideos.html" class="btn primary">Mehr anzeigen</a>
-  </div>
-</section>
-
-<!-- --------------------------------------------------- -->
+  <section id="animations" class="section">
+    <div class="section__head">
+      <h2 data-i18n="animations.title">Animationen</h2>
+      <p data-i18n="animations.subtitle">Motion Graphics, Webanimationen und leichte Interaktionen.</p>
+    </div>
+    <div class="grid cards">
+      <article class="card">
+        <div class="card__media">
+          <video src="videos/202511181913(1).mp4" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="animations.card1.title">MotorGirl-Animation</h3>
+          <p data-i18n="animations.card1.description">Ich habe diese Animation mit der BlenderApp erstellt.</p>
+          <div class="tags"><span data-i18n="animations.card1.tag1">Design</span><span
+              data-i18n="animations.card1.tag2">Animation</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media">
+          <video src="videos/video0000-0250.mkv" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="animations.card2.title">Abstract Art</h3>
+          <p data-i18n="animations.card2.description">In diesem Video habe ich dieses animierte Mädchen zum Testen
+            erstellt.</p>
+          <div class="tags"><span data-i18n="animations.card2.tag1">Motion</span><span
+              data-i18n="animations.card2.tag2">Kunst</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media">
+          <video src="videos/video-check0001-0078.mkv" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="animations.card3.title">Interaktives Design</h3>
+          <p data-i18n="animations.card3.description">In diesem Video läuft dieses animierte Mädchen.</p>
+          <div class="tags"><span data-i18n="animations.card3.tag1">BlenderApp</span><span
+              data-i18n="animations.card3.tag2">Interaktion</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="button-center-container">
+      <a href="morevideos.html" class="btn primary btn-centered" target="_blank" data-i18n="animations.more">Mehr
+        anzeigen</a>
+    </div>
+  </section>
 
   <section id="projects" class="section alt">
     <div class="section__head">
-      <h2>Programmierungsprojekte</h2>
-      <p>Praktische Beispiele mit Demo-Links und Code.</p>
+      <h2 data-i18n="projects.title">Programmierungsprojekte</h2>
+      <p data-i18n="projects.subtitle">Praktische Beispiele mit Demo-Links und Code.</p>
     </div>
     <div class="grid cards">
-      <!-- Portfolio Website -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>Portfolio Website</h3>
-    <p>Meine persönliche Portfolio-Seite mit HTML und CSS, die mein Lebenslauf und Projekte zeigt.</p>
-    <div class="tags"><span>HTML</span><span>CSS</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/samira-dev-star.github.io" target="_blank" rel="noopener">Projekt anzeigen</a>
+      <article class="card">
+        <div class="card__media thumb shimmer"></div>
+        <div class="card__body">
+          <h3 data-i18n="projects.card1.title">TB Chest X-Ray Classifier</h3>
+          <p data-i18n="projects.card1.description">Deep-Learning-Modell zur Erkennung von Tuberkulose mit 99.51%
+            Genauigkeit.</p>
+          <div class="tags">
+            <span>Python</span><span>Jupyter</span><span>Deep Learning</span><span>Fast api</span>
+          </div>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/samira-dev-star/tb-chest-xray-classifier" target="_blank"
+              rel="noopener" data-i18n="projects.view">Projekt anzeigen</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media thumb shimmer"></div>
+        <div class="card__body">
+          <h3 data-i18n="projects.card2.title">Royal Clinic Project</h3>
+          <p data-i18n="projects.card2.description">Django-Webanwendung zur Verwaltung einer Luxusklinik.</p>
+          <div class="tags">
+            <span>Django</span><span>Html/css</span><span>Tailwind</span><span>MySQL</span><span>AJAX</span><span>jquery</span>
+          </div>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/samira-dev-star/royal-clinic-project" target="_blank"
+              rel="noopener" data-i18n="projects.view">Projekt anzeigen</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media thumb shimmer"></div>
+        <div class="card__body">
+          <h3 data-i18n="projects.card3.title">The Magic Wish</h3>
+          <p data-i18n="projects.card3.description">Ein interaktives Scratch-Spiel mit kreativer Story.</p>
+          <div class="tags"><span>Scratch</span><span>Game Design</span></div>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/samira-dev-star/The-Magic-Wish-A-Scratch-Game" target="_blank"
+              rel="noopener" data-i18n="projects.view">Projekt anzeigen</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media thumb shimmer"></div>
+        <div class="card__body">
+          <h3 data-i18n="projects.card4.title">Library Manager</h3>
+          <p data-i18n="projects.card4.description">Ein Kommandozeilen-Tool zur Verwaltung von Bibliotheksressourcen.
+          </p>
+          <div class="tags"><span>Python</span><span>SQL</span><span>CLI</span></div>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/samira-dev-star/library-manager" target="_blank"
+              rel="noopener" data-i18n="projects.view">Projekt anzeigen</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media thumb shimmer"></div>
+        <div class="card__body">
+          <h3 data-i18n="projects.card5.title">Real-Time Notification</h3>
+          <p data-i18n="projects.card5.description">Benachrichtigungssystem mit Python zur Echtzeit-Kommunikation.</p>
+          <div class="tags"><span>Python</span><span>Realtime</span></div>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/samira-dev-star/real-time-notification" target="_blank"
+              rel="noopener" data-i18n="projects.view">Projekt anzeigen</a>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__media thumb shimmer"></div>
+        <div class="card__body">
+          <h3 data-i18n="projects.card6.title">Django Online Shop</h3>
+          <p data-i18n="projects.card6.description">E-Commerce-Plattform mit Admin-Panel und responsivem Design.</p>
+          <div class="tags"><span>Django</span><span>CSS</span><span>mysql</span><span>ajax</span></div>
+          <div class="actions">
+            <a class="btn small" href="https://github.com/samira-dev-star/django_online_shop-master" target="_blank"
+              rel="noopener" data-i18n="projects.view">Projekt anzeigen</a>
+          </div>
+        </div>
+      </article>
     </div>
-  </div>
-</article>
 
-<!-- CV Resume -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>CV & Resume</h3>
-    <p>Strukturiertes Lebenslauf-Projekt mit responsivem Design und klarer Typografie.</p>
-    <div class="tags"><span>HTML</span><span>Design</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/CV-Resume" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- TB Chest X-Ray Classifier -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>TB Chest X-Ray Classifier</h3>
-    <p>Deep-Learning-Modell zur Erkennung von Tuberkulose mit 99.51% Genauigkeit und 0.991 AUC.</p>
-    <div class="tags"><span>Python</span><span>Jupyter</span><span>Deep Learning</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/tb-chest-xray-classifier" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- Full Stack & 3D Portfolio -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>Full Stack & 3D Portfolio</h3>
-    <p>Ein Mix aus Full-Stack-Webentwicklung und 3D-Design mit Blender und modernen Frameworks.</p>
-    <div class="tags"><span>Django</span><span>FastAPI</span><span>Blender</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/samira-dev-star" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- About Me Web -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>About Me Web</h3>
-    <p>Eine kleine Website, um mich besser kennenzulernen und in Kontakt zu bleiben.</p>
-    <div class="tags"><span>HTML</span><span>CSS</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/about_me_web" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- Royal Clinic Project -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>Royal Clinic Project</h3>
-    <p>Django-Webanwendung zur Verwaltung einer Luxusklinik mit Authentifizierung, Terminen und Dashboard.</p>
-    <div class="tags"><span>Django</span><span>Tailwind</span><span>MySQL</span><span>AJAX</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/royal-clinic-project" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- The Magic Wish (Scratch Game) -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>The Magic Wish</h3>
-    <p>Ein interaktives Scratch-Spiel mit kreativer Story und visueller Umsetzung.</p>
-    <div class="tags"><span>Scratch</span><span>Game Design</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/The-Magic-Wish-A-Scratch-Game" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- Library Manager -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>Library Manager</h3>
-    <p>Ein Kommandozeilen-Tool zur Verwaltung von Bibliotheksressourcen mit SQL-Datenbank.</p>
-    <div class="tags"><span>Python</span><span>SQL</span><span>CLI</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/library-manager" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- Real-Time Notification -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>Real-Time Notification</h3>
-    <p>Benachrichtigungssystem mit Python zur Echtzeit-Kommunikation.</p>
-    <div class="tags"><span>Python</span><span>Realtime</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/real-time-notification" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
-
-<!-- Django Online Shop -->
-<article class="card">
-  <div class="card__media thumb shimmer"></div>
-  <div class="card__body">
-    <h3>Django Online Shop</h3>
-    <p>E-Commerce-Plattform mit Admin-Panel, Produktverwaltung und responsivem Design.</p>
-    <div class="tags"><span>Django</span><span>CSS</span><span>Admin</span></div>
-    <div class="actions">
-      <a class="btn small" href="https://github.com/samira-dev-star/django_online_shop-master" target="_blank" rel="noopener">Projekt anzeigen</a>
-    </div>
-  </div>
-</article>
+    <div class="button-center-container">
+      <a href="https://github.com/samira-dev-star?tab=repositories" target="_blank">
+        <button class="btn primary btn-show-more" data-i18n="projects.more">Weitere Projekte</button>
+      </a>
     </div>
   </section>
 
-  <!-- ----------------------------------------------------------------------------------- -->
-<section id="certs" class="section">
-  <div class="section__head">
-    <h2>Zertifikate & Nachweise</h2>
-    <p>Offizielle Zertifikate, Kurse und Erfolge aus verschiedenen Plattformen.</p>
-  </div>
-
-  <!-- Filter Buttons -->
-  <div class="cert-filter">
-    <button class="filter-btn active" data-filter="all">Alle Zertifikate</button>
-    <button class="filter-btn" data-filter="Harvard">Harvard</button>
-    <button class="filter-btn" data-filter="LinkedIn">LinkedIn</button>
-    <button class="filter-btn" data-filter="Intellipaat">Intellipaat</button>
-    <button class="filter-btn" data-filter="TVTO">TVTO</button>
-    <button class="filter-btn" data-filter="Urbino">Urbino</button>
-    <button class="filter-btn" data-filter="Iran Digital">Iran Digital</button>
-  </div>
-
-  <!-- Certificate Carousel -->
-  <div class="cert-carousel">
-    <!-- Harvard -->
-    <div class="cert-card" data-platform="Harvard"><h3>CS50X</h3><p>Harvard University</p><a href="images/certificates/programming/CS50X.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Harvard"><h3>CS50P for Python</h3><p>Harvard University</p><a href="images/certificates/programming/CS50forpython.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Harvard"><h3>CS50S</h3><p>Harvard University</p><a href="images/certificates/programming/CS50S.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Harvard"><h3>CS50SQL</h3><p>Harvard University</p><a href="images/certificates/programming/CS50SQL.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-
-    <!-- LinkedIn -->
-    <div class="cert-card" data-platform="LinkedIn"><h3>Career Skills in Software</h3><p>LinkedIn Learning</p><a href="images/certificates/programming/CertificateOfCompletion_Introduction_to_Career_Skills_in_Software.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-
-    <!-- Urbino -->
-    <div class="cert-card" data-platform="Urbino"><h3>Coding in Biblioteca</h3><p>Università di Urbino</p><a href="images/certificates/programming/Coding_in_Biblioteca-Certificato_di_completamento_13416.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Urbino"><h3>Coding per Genitori</h3><p>Università di Urbino</p><a href="images/certificates/programming/Coding_per_genitori-Certificato_di_completamento_13417.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-
-    <!-- Iran Digital -->
-    <div class="cert-card" data-platform="Iran Digital"><h3>Django Project</h3><p>Iran Digital</p><a href="images/certificates/programming/Django.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>Store Project</h3><p>Iran Digital</p><a href="images/certificates/programming/StoreProject.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>Python Certificate</h3><p>Iran Digital</p><a href="images/certificates/programming/python.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>Python with 4 Projects</h3><p>Iran Digital</p><a href="images/certificates/programming/pythonwith4projectscertificate.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>Excel Table Drawing</h3><p>Iran Digital</p><a href="images/certificates/programming/table_draw_excel.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>Understand Programming</h3><p>Iran Digital</p><a href="images/certificates/programming/understand_programming_certificate.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>CSS Certificate</h3><p>Iran Digital</p><a href="images/certificates/programming/css-certificate.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>HTML Certificate</h3><p>Iran Digital</p><a href="images/certificates/programming/html-certificate.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Iran Digital"><h3>Word Certificate</h3><p>Iran Digital</p><a href="images/certificates/programming/word-certificate.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-
-    <!-- TVTO -->
-    <div class="cert-card" data-platform="TVTO"><h3>Vocational Certificate (Python)</h3><p>TVTO Iran</p><a href="images/certificates/programming/VocationalCertificatepython.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-
-    <!-- Intellipaat -->
-    <div class="cert-card" data-platform="Intellipaat"><h3>Intellipaat Certificate 1</h3><p>Intellipaat Academy</p><a href="images/certificates/programming/intellipaat_com_academy_certificate_link_Yz0MTkmdT0yNjQ4OTEmZxhOPTE=.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Intellipaat"><h3>Intellipaat Certificate 2</h3><p>Intellipaat Academy</p><a href="images/certificates/programming/intellipaat_com_academy_certificate_link_Yz0NTkQzNjU9MjY0ODkuMjV4dD0x.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-    <div class="cert-card" data-platform="Intellipaat"><h3>Intellipaat Certificate 3</h3><p>Intellipaat Academy</p><a href="images/certificates/programming/intellipaat_com_academy_certificate_link_Yz0yNTgxJnU9MjY0ODkuMjV4dD0x.pdf" target="_blank" class="btn tiny">PDF ansehen</a></div>
-  </div>
-
-  <!-- Controls -->
-  <div class="cert-controls">
-    <button class="btn play">Play</button>
-    <button class="btn slow">Slow Down</button>
-    <button class="btn fast">Speed Up</button>
-    <a href="https://github.com/samira-dev-star/CV-Resume/tree/main/certificates/programming_IT_certificates" class="btn view-all" target="_blank">Alle Zertifikate auf GitHub →</a>
-  </div>
-</section>
-
-<!-- ------------------------------------------------------------------------------------- -->
+  <section id="certs" class="section">
+    <div class="section__head">
+      <h2 data-i18n="certs.title">Zertifikate & Nachweise</h2>
+      <p data-i18n="certs.subtitle">Offizielle Zertifikate, Kurse und Erfolge aus verschiedenen Plattformen.</p>
+    </div>
+    <div class="cert-filter">
+      <button class="filter-btn active" data-filter="all" data-i18n="certs.filter.all">Alle Zertifikate</button>
+      <button class="filter-btn" data-filter="Harvard" data-i18n="certs.filter.harvard">Harvard</button>
+      <button class="filter-btn" data-filter="LinkedIn" data-i18n="certs.filter.linkedin">LinkedIn</button>
+      <button class="filter-btn" data-filter="Intellipaat" data-i18n="certs.filter.intellipaat">Intellipaat</button>
+      <button class="filter-btn" data-filter="TVTO" data-i18n="certs.filter.tvto">TVTO</button>
+      <button class="filter-btn" data-filter="Urbino" data-i18n="certs.filter.urbino">Urbino</button>
+      <button class="filter-btn" data-filter="Iran Digital" data-i18n="certs.filter.irandigital">Iran Digital</button>
+    </div>
+    <div class="cert-carousel">
+      <div class="cert-card" data-platform="Harvard">
+        <h3>CS50X</h3>
+        <p>Harvard University</p><a href="images/certificates/programming/CS50X.pdf" target="_blank" class="btn tiny"
+          data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Harvard">
+        <h3>CS50P for Python</h3>
+        <p>Harvard University</p><a href="images/certificates/programming/CS50forpython.pdf" target="_blank"
+          class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Harvard">
+        <h3>CS50S</h3>
+        <p>Harvard University</p><a href="images/certificates/programming/CS50S.pdf" target="_blank" class="btn tiny"
+          data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Harvard">
+        <h3>CS50SQL</h3>
+        <p>Harvard University</p><a href="images/certificates/programming/CS50SQL.pdf" target="_blank" class="btn tiny"
+          data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="LinkedIn">
+        <h3>Career Skills in Software</h3>
+        <p>LinkedIn Learning</p><a
+          href="images/certificates/programming/CertificateOfCompletion_Introduction_to_Career_Skills_in_Software.pdf"
+          target="_blank" class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Urbino">
+        <h3>Coding in Biblioteca</h3>
+        <p>Università di Urbino</p><a
+          href="images/certificates/programming/Coding_in_Biblioteca-Certificato_di_completamento_13416.pdf"
+          target="_blank" class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Urbino">
+        <h3>Coding per Genitori</h3>
+        <p>Università di Urbino</p><a
+          href="images/certificates/programming/Coding_per_genitori-Certificato_di_completamento_13417.pdf"
+          target="_blank" class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>Django Project</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/Django.pdf" target="_blank" class="btn tiny"
+          data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>Store Project</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/StoreProject.pdf" target="_blank" class="btn tiny"
+          data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>Python Certificate</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/python.pdf" target="_blank" class="btn tiny"
+          data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>Python with 4 Projects</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/pythonwith4projectscertificate.pdf" target="_blank"
+          class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>Excel Table Drawing</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/table_draw_excel.pdf" target="_blank"
+          class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>Understand Programming</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/understand_programming_certificate.pdf"
+          target="_blank" class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>CSS Certificate</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/css-certificate.pdf" target="_blank"
+          class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>HTML Certificate</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/html-certificate.pdf" target="_blank"
+          class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Iran Digital">
+        <h3>Word Certificate</h3>
+        <p>Iran Digital</p><a href="images/certificates/programming/word-certificate.pdf" target="_blank"
+          class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="TVTO">
+        <h3>Vocational Certificate (Python)</h3>
+        <p>TVTO Iran</p><a href="images/certificates/programming/VocationalCertificatepython.pdf" target="_blank"
+          class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Intellipaat">
+        <h3>Intellipaat Certificate 1</h3>
+        <p>Intellipaat Academy</p><a
+          href="images/certificates/programming/intellipaat_com_academy_certificate_link_Yz0MTkmdT0yNjQ4OTEmZxhOPTE=.pdf"
+          target="_blank" class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Intellipaat">
+        <h3>Intellipaat Certificate 2</h3>
+        <p>Intellipaat Academy</p><a
+          href="images/certificates/programming/intellipaat_com_academy_certificate_link_Yz0NTkQzNjU9MjY0ODkuMjV4dD0x.pdf"
+          target="_blank" class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+      <div class="cert-card" data-platform="Intellipaat">
+        <h3>Intellipaat Certificate 3</h3>
+        <p>Intellipaat Academy</p><a
+          href="images/certificates/programming/intellipaat_com_academy_certificate_link_Yz0yNTgxJnU9MjY0ODkuMjV4dD0x.pdf"
+          target="_blank" class="btn tiny" data-i18n="certs.view">PDF ansehen</a>
+      </div>
+    </div>
+    <div class="cert-controls">
+      <button class="btn play" data-i18n="certs.controls.play">Play</button>
+      <button class="btn slow" data-i18n="certs.controls.slow">Slow Down</button>
+      <button class="btn fast" data-i18n="certs.controls.fast">Speed Up</button>
+      <a href="https://github.com/samira-dev-star/CV-Resume/tree/main/certificates/programming_IT_certificates"
+        class="btn view-all" target="_blank" data-i18n="certs.controls.view_all">Alle Zertifikate auf GitHub →</a>
+    </div>
+  </section>
 
   <section id="contact" class="section alt">
     <div class="section__head">
-      <h2>Kontakt</h2>
-      <p>Schreib mir für Zusammenarbeit oder Austausch.</p>
+      <h2 data-i18n="contact.title">Kontakt</h2>
+      <p data-i18n="contact.subtitle">Schreib mir für Zusammenarbeit oder Austausch.</p>
     </div>
-    <form class="contact" name="contact" netlify>
-      <label>
-        <span>Name</span>
-        <input type="text" name="name" required />
-      </label>
-      <label>
-        <span>E-Mail</span>
-        <input type="email" name="email" required />
-      </label>
-      <label>
-        <span>Nachricht</span>
-        <textarea name="message" rows="4" required></textarea>
-      </label>
-      <button class="btn primary" type="submit">Senden</button>
-    </form>
     <div class="socials">
-      <a href="https://github.com/samira-dev-star" aria-label="GitHub">GitHub</a>
-      <a href="#" aria-label="LinkedIn">LinkedIn</a>
-      <a href="#" aria-label="Email">Email</a>
+      <a href="https://github.com/samira-dev-star" aria-label="GitHub" target="_blank">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+        <span data-i18n="contact.github">GitHub</span>
+      </a>
+      <a href="#" aria-label="LinkedIn" target="_blank">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
+        <span data-i18n="contact.linkedin">LinkedIn</span>
+      </a>
+      <a href="mailto:samira@example.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
+        <span data-i18n="contact.email">Email</span>
+      </a>
+      <a href="tel:+989123456789" aria-label="Phone" class="phone-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+        </svg>
+        <span data-i18n="contact.phone">Mobile</span>
+      </a>
+      <a href="tel:+1234567890" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.149-.198.297-.768.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.297.297-.495.099-.198.05-.371-.025-.52-.075-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.297-.01-.47-.01-.173 0-.445.064-.678.319-.232.254-.893.873-.893 2.128 0 1.255.916 2.468 1.044 2.636.128.168 1.8 2.747 4.368 3.856.61.264 1.086.423 1.457.538.613.194 1.171.166 1.612.101.494-.073 1.525-.623 1.742-1.225.217-.602.217-1.118.152-1.225-.064-.107-.232-.168-.529-.317zM20.52 3.476c-.95-.902-2.203-1.4-3.536-1.4-1.348 0-2.62.51-3.595 1.437L3.44 14.123c-.49.49-.85 1.1-1.04 1.77l-.65 2.97c-.2.92.64 1.73 1.54 1.54l2.97-.65c.67-.19 1.28-.55 1.77-1.04l10.76-10.76c.93-.93 1.437-2.246 1.437-3.595 0-1.332-.498-2.585-1.4-3.536z" />
+        </svg>
+        <span data-i18n="contact.whatsapp">WhatsApp</span>
+      </a>
+      <a href="https://t.me/samira_dev" aria-label="Telegram" target="_blank">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M9.78 18.65l.28-4.23l7.68-6.92c.78-.7-.36-1.08-1.12-.4L7.2 14.2L3.02 12.8c-.76-.25-.74-.76.1-1.12l17.5-6.75c.7-.28 1.35.33 1.08 1.05L19.5 20.3c-.13.34-.5.5-.84.36l-4.5-1.8l-3.4 2.04c-.41.24-.94.03-1.08-.45z" />
+        </svg>
+        <span data-i18n="contact.telegram">Telegram</span>
+      </a>
     </div>
-
-    <!-- Über mich Section -->
-  <section id="about" class="section alt">
-    <div class="section__head">
-      <h2>Über mich</h2>
-      <p>Ich bin Sam, leidenschaftlich für Animation und Programmierung. 
-         Mein Ziel ist es, kreative visuelle Erlebnisse mit solider Softwareentwicklung zu verbinden. 
-         In diesem Portfolio finden Sie meine Projekte, Zertifikate und Ideen.</p>
-    </div>
-  </section>
-
-  <!-- Animationen Section -->
-  <section id="animations" class="section">
-    <div class="section__head">
-      <h2>Animationen</h2>
-      <p>Motion Graphics, Webanimationen und leichte Interaktionen.</p>
-    </div>
-    <!-- ... بقیه‌ی کد شما بدون تغییر ... -->
-  </section>
-
-
   </section>
 
   <footer class="footer">
-    <p>© Sam — Portfolio. Mit Liebe zum Detail erstellt.</p>
+    <p data-i18n="footer.text">© Samira Mashti Zadeh — Portfolio. Mit Liebe zum Detail erstellt.</p>
   </footer>
 
   <script src="js/app.js"></script>
+  <script src="js/translation-index.js"></script>
+  <script src="js/meno-mobile.js"></script>
 </body>
+
 </html>
-
-
-

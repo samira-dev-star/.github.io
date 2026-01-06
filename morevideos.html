@@ -1,261 +1,352 @@
 <!DOCTYPE html>
-<html lang="de" dir="ltr">
+<html lang="de" dir="ltr" data-lang="de">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sam | Portfolio Animation & Programmierung</title>
-  <meta name="description" content="Animationen, Programmierprojekte und professionelle Zertifikate von Sam." />
+  <title>Samira Mashti Zadeh</title>
+  <meta name="description"
+    content="Animationen, Programmierprojekte und professionelle Zertifikate von Samira Mashti Zadeh." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="./images/main/favicon.png" type="image/png">
 </head>
+
 <body>
-  
+  <header class="nav">
+    <img src="images/main/lego.png" alt="logo" class="logo">
 
-<section id="animations" class="section">
-  <div class="section__head">
-    <h2>Alle Animationen und Design</h2>
-    <p>Motion Graphics, Webanimationen und leichte Interaktionen.</p>
-  </div>
+    <!-- دکمه همبرگر منو برای موبایل -->
+    <button class="mobile-menu-toggle" aria-label="Menu" id="mobileMenuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <div class="grid cards">
-    <!-- Video 1 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\0001-0241.mkv" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>Ein simpel Innenarchitektur</h3>
-        <p>Ich habe diese Animation mit der BlenderApp erstellt.</p>
-        <div class="tags"><span>Design</span><span>Innenarchitektur</span></div>
-      </div>
-    </article>
+    <!-- Overlay برای پس‌زمینه -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Video 2 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\samvid0001-1057.mkv" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>Eine Mädchen mit der Pistole</h3>
-        <p>In diesem Video dreht sich die Kamera um den Charakter.</p>
-        <div class="tags"><span>Motion</span><span>Kunst</span></div>
-      </div>
-    </article>
+    <!-- ID اضافه شد -->
+    <nav id="mainNav">
+      <a href="#hero" data-i18n="nav.home">Start</a>
+      <a href="#about" data-i18n="nav.about">Über mich</a>
+      <a href="#animations" data-i18n="nav.animations">Animationen</a>
+      <a href="#projects" data-i18n="nav.projects">Projekte</a>
+      <a href="#certs" data-i18n="nav.certs">Zertifikate</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+      <a href="">
+      <button id="langBtn" class="btn ghost" data-i18n="nav.lang" data-lang="en">🌐 EN</button>
+      </a>
+    </nav>
+  </header>
 
-    <!-- Video 3 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\video check0001-0150.mkv" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>Interaktives Design</h3>
-        <p> In diesem Video, Dieses animirte Mädchen ist Laufen langsam.</p>
-        <div class="tags"><span>BlenderApp</span><span>Charakter</span></div>
-      </div>
-    </article>
+  <section id="animations" class="section">
+    <div class="section__head">
+      <h2 data-i18n="morevideos.main_title">Alle Animationen und Design</h2>
+      <p data-i18n="morevideos.subtitle">Motion Graphics, Webanimationen und leichte Interaktionen.</p>
+    </div>
 
-    <!-- Video 4 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\video0000-0127.mkv" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>Interaktives Design</h3>
-        <p> In diesem Video, der Charakter spricht.</p>
-        <div class="tags"><span>BlenderApp</span><span>Charakter</span></div>
-      </div>
-    </article>
+    <div class="grid cards">
+      <!-- Video 1 -->
+      <article class="card">
+        <div class="card__media">
+          <video src="./videos/0001-0241.mkv" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.videos.video1.title">Ein simpel Innenarchitektur</h3>
+          <p data-i18n="morevideos.videos.video1.description">Ich habe diese Animation mit der BlenderApp erstellt.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.videos.video1.tag1">Design</span>
+            <span data-i18n="morevideos.videos.video1.tag2">Innenarchitektur</span>
+          </div>
+        </div>
+      </article>
 
-    <!-- Video 5 -->
-    <article class="card">
-      <div class="card__media">
-        <video src="videos\samvid0001-1120.mkv" controls preload="metadata"></video>
-      </div>
-      <div class="card__body">
-        <h3>Ein simpel Innenarchitektur</h3>
-        <p>In diesem Video dreht sich die Kamera um den Charakter.</p>
-        <div class="tags"><span>Design</span></div>
-      </div>
-    </article>
+      <!-- Video 2 -->
+      <article class="card">
+        <div class="card__media">
+          <video src="./videos/samvid0001-1057.mkv" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.videos.video2.title">Eine Mädchen mit der Pistole</h3>
+          <p data-i18n="morevideos.videos.video2.description">In diesem Video dreht sich die Kamera um den Charakter.
+          </p>
+          <div class="tags">
+            <span data-i18n="morevideos.videos.video2.tag1">Motion</span>
+            <span data-i18n="morevideos.videos.video2.tag2">Kunst</span>
+          </div>
+        </div>
+      </article>
 
-    <!-- images -->
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/character render pic.png" alt="Character Render" />
-  </div>
-  <div class="card__body">
-    <h3>Character Render</h3>
-    <p>Ein gerenderter Charakter mit künstlerischem Stil.</p>
-    <div class="tags"><span>Design</span><span>Charakter</span></div>
-  </div>
-</article>
+      <!-- Video 3 -->
+      <article class="card">
+        <div class="card__media">
+          <video src="./videos/video check0001-0150.mkv" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.videos.video3.title">Interaktives Design</h3>
+          <p data-i18n="morevideos.videos.video3.description">In diesem Video, Dieses animirte Mädchen ist Laufen
+            langsam.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.videos.video3.tag1">BlenderApp</span>
+            <span data-i18n="morevideos.videos.video3.tag2">Charakter</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/girl with gun.png" alt="Girl with Gun" />
-  </div>
-  <div class="card__body">
-    <h3>Girl with Gun</h3>
-    <p>Starke Pose und visuelle Wirkung.</p>
-    <div class="tags"><span>Charakter</span><span>Konzept</span></div>
-  </div>
-</article>
+      <!-- Video 4 -->
+      <article class="card">
+        <div class="card__media">
+          <video src="./videos/video0000-0127.mkv" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.videos.video4.title">Interaktives Design</h3>
+          <p data-i18n="morevideos.videos.video4.description">In diesem Video, der Charakter spricht.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.videos.video4.tag1">BlenderApp</span>
+            <span data-i18n="morevideos.videos.video4.tag2">Charakter</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/mycharacter.png" alt="My Character" />
-  </div>
-  <div class="card__body">
-    <h3>My Character</h3>
-    <p>Persönliches Design mit einzigartigem Stil.</p>
-    <div class="tags"><span>Original</span><span>Design</span></div>
-  </div>
-</article>
+      <!-- Video 5 -->
+      <article class="card">
+        <div class="card__media">
+          <video src="./videos/samvid0001-1120.mkv" controls preload="metadata"></video>
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.videos.video5.title">Ein simpel Innenarchitektur</h3>
+          <p data-i18n="morevideos.videos.video5.description">In diesem Video dreht sich die Kamera um den Charakter.
+          </p>
+          <div class="tags">
+            <span data-i18n="morevideos.videos.video5.tag1">Design</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/sam .png" alt="Sam" />
-  </div>
-  <div class="card__body">
-    <h3>Sam</h3>
-    <p>Charakterdarstellung mit Fokus auf Ausdruck.</p>
-    <div class="tags"><span>Portrait</span><span>Design</span></div>
-  </div>
-</article>
+      <!-- images -->
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/character render pic.png" alt="Character Render" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image1.title">Character Render</h3>
+          <p data-i18n="morevideos.images.image1.description">Ein gerenderter Charakter mit künstlerischem Stil.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image1.tag1">Design</span>
+            <span data-i18n="morevideos.images.image1.tag2">Charakter</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/sam baby.png" alt="Sam Baby" />
-  </div>
-  <div class="card__body">
-    <h3>Sam Baby</h3>
-    <p>Kindliche Version des Charakters.</p>
-    <div class="tags"><span>Charakter</span><span>Baby</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/girl with gun.png" alt="Girl with Gun" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image2.title">Girl with Gun</h3>
+          <p data-i18n="morevideos.images.image2.description">Starke Pose und visuelle Wirkung.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image2.tag1">Charakter</span>
+            <span data-i18n="morevideos.images.image2.tag2">Konzept</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/sam back.png" alt="Sam Back" />
-  </div>
-  <div class="card__body">
-    <h3>Sam Rückansicht</h3>
-    <p>Rückansicht des Charakters für Modellierung.</p>
-    <div class="tags"><span>Modell</span><span>Ansicht</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/mycharacter.png" alt="My Character" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image3.title">My Character</h3>
+          <p data-i18n="morevideos.images.image3.description">Persönliches Design mit einzigartigem Stil.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image3.tag1">Original</span>
+            <span data-i18n="morevideos.images.image3.tag2">Design</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/sam front.PNG" alt="Sam Front" />
-  </div>
-  <div class="card__body">
-    <h3>Sam Vorderansicht</h3>
-    <p>Frontale Ansicht für Charakterdesign.</p>
-    <div class="tags"><span>Modell</span><span>Ansicht</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/sam .png" alt="Sam" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image4.title">Sam</h3>
+          <p data-i18n="morevideos.images.image4.description">Charakterdarstellung mit Fokus auf Ausdruck.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image4.tag1">Portrait</span>
+            <span data-i18n="morevideos.images.image4.tag2">Design</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/Screenshot 2025-11-18 180810.png" alt="Screenshot 180810" />
-  </div>
-  <div class="card__body">
-    <h3>Screenshot 180810</h3>
-    <p>Arbeitsprozess oder Interface-Darstellung.</p>
-    <div class="tags"><span>Workflow</span><span>Screenshot</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/sam baby.png" alt="Sam Baby" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image5.title">Sam Baby</h3>
+          <p data-i18n="morevideos.images.image5.description">Kindliche Version des Charakters.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image5.tag1">Charakter</span>
+            <span data-i18n="morevideos.images.image5.tag2">Baby</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/Screenshot 2025-11-18 182353.png" alt="Screenshot 182353" />
-  </div>
-  <div class="card__body">
-    <h3>Screenshot 182353</h3>
-    <p>Design-Entwicklungsschritt dokumentiert.</p>
-    <div class="tags"><span>Entwicklung</span><span>Screenshot</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/sam back.png" alt="Sam Back" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image6.title">Sam Rückansicht</h3>
+          <p data-i18n="morevideos.images.image6.description">Rückansicht des Charakters für Modellierung.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image6.tag1">Modell</span>
+            <span data-i18n="morevideos.images.image6.tag2">Ansicht</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/Screenshot 2025-11-18 183737.png" alt="Screenshot 183737" />
-  </div>
-  <div class="card__body">
-    <h3>Screenshot 183737</h3>
-    <p>Visuelle Referenz aus dem Projekt.</p>
-    <div class="tags"><span>Projekt</span><span>Referenz</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/sam front.PNG" alt="Sam Front" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image7.title">Sam Vorderansicht</h3>
+          <p data-i18n="morevideos.images.image7.description">Frontale Ansicht für Charakterdesign.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image7.tag1">Modell</span>
+            <span data-i18n="morevideos.images.image7.tag2">Ansicht</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/Screenshot 2025-11-18 184423.png" alt="Screenshot 184423" />
-  </div>
-  <div class="card__body">
-    <h3>Screenshot 184423</h3>
-    <p>Interface oder Design-Element.</p>
-    <div class="tags"><span>UI</span><span>Design</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/Screenshot 2025-11-18 180810.png" alt="Screenshot 180810" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image8.title">Screenshot 180810</h3>
+          <p data-i18n="morevideos.images.image8.description">Arbeitsprozess oder Interface-Darstellung.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image8.tag1">Workflow</span>
+            <span data-i18n="morevideos.images.image8.tag2">Screenshot</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/Screenshot 2025-11-18 184839.png" alt="Screenshot 184839" />
-  </div>
-  <div class="card__body">
-    <h3>Screenshot 184839</h3>
-    <p>Detailansicht eines Designprozesses.</p>
-    <div class="tags"><span>Detail</span><span>Screenshot</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/Screenshot 2025-11-18 182353.png" alt="Screenshot 182353" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image9.title">Screenshot 182353</h3>
+          <p data-i18n="morevideos.images.image9.description">Design-Entwicklungsschritt dokumentiert.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image9.tag1">Entwicklung</span>
+            <span data-i18n="morevideos.images.image9.tag2">Screenshot</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/Screenshot 2025-11-18 185258.png" alt="Screenshot 185258" />
-  </div>
-  <div class="card__body">
-    <h3>Screenshot 185258</h3>
-    <p>Visuelle Dokumentation eines Arbeitsschritts.</p>
-    <div class="tags"><span>Dokumentation</span><span>Design</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/Screenshot 2025-11-18 183737.png" alt="Screenshot 183737" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image10.title">Screenshot 183737</h3>
+          <p data-i18n="morevideos.images.image10.description">Visuelle Referenz aus dem Projekt.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image10.tag1">Projekt</span>
+            <span data-i18n="morevideos.images.image10.tag2">Referenz</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/Screenshot 2025-11-18 185346.png" alt="Screenshot 185346" />
-  </div>
-  <div class="card__body">
-    <h3>Screenshot 185346</h3>
-    <p>Design-Iteration oder Testansicht.</p>
-    <div class="tags"><span>Iteration</span><span>Test</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/Screenshot 2025-11-18 184423.png" alt="Screenshot 184423" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image11.title">Screenshot 184423</h3>
+          <p data-i18n="morevideos.images.image11.description">Interface oder Design-Element.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image11.tag1">UI</span>
+            <span data-i18n="morevideos.images.image11.tag2">Design</span>
+          </div>
+        </div>
+      </article>
 
-<article class="card">
-  <div class="card__media">
-    <img src="images/design/untitled.png" alt="Untitled" />
-  </div>
-  <div class="card__body">
-    <h3>Untitled</h3>
-    <p>Unbenanntes Design oder Konzeptskizze.</p>
-    <div class="tags"><span>Skizze</span><span>Konzept</span></div>
-  </div>
-</article>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/Screenshot 2025-11-18 184839.png" alt="Screenshot 184839" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image12.title">Screenshot 184839</h3>
+          <p data-i18n="morevideos.images.image12.description">Detailansicht eines Designprozesses.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image12.tag1">Detail</span>
+            <span data-i18n="morevideos.images.image12.tag2">Screenshot</span>
+          </div>
+        </div>
+      </article>
 
-</section>
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/Screenshot 2025-11-18 185258.png" alt="Screenshot 185258" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image13.title">Screenshot 185258</h3>
+          <p data-i18n="morevideos.images.image13.description">Visuelle Dokumentation eines Arbeitsschritts.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image13.tag1">Dokumentation</span>
+            <span data-i18n="morevideos.images.image13.tag2">Design</span>
+          </div>
+        </div>
+      </article>
 
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/Screenshot 2025-11-18 185346.png" alt="Screenshot 185346" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image14.title">Screenshot 185346</h3>
+          <p data-i18n="morevideos.images.image14.description">Design-Iteration oder Testansicht.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image14.tag1">Iteration</span>
+            <span data-i18n="morevideos.images.image14.tag2">Test</span>
+          </div>
+        </div>
+      </article>
 
+      <article class="card">
+        <div class="card__media">
+          <img src="./images/design/untitled.png" alt="Untitled" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <h3 data-i18n="morevideos.images.image15.title">Untitled</h3>
+          <p data-i18n="morevideos.images.image15.description">Unbenanntes Design oder Konzeptskizze.</p>
+          <div class="tags">
+            <span data-i18n="morevideos.images.image15.tag1">Skizze</span>
+            <span data-i18n="morevideos.images.image15.tag2">Konzept</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <footer class="footer">
-    <p>© Sam — Portfolio. Mit Liebe zum Detail erstellt.</p>
+    <p data-i18n="footer.text">© Samira Mashti Zadeh — Portfolio. Mit Liebe zum Detail erstellt.</p>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="js/translation-morevideos.js"></script>
+  <script src="js/meno-mobile.js"></script>
+
+
 </body>
+
 </html>
-
-
-

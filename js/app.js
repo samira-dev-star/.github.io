@@ -8,29 +8,35 @@ document.querySelectorAll('header nav a').forEach(a => {
   });
 });
 
-// مشاهده کارت‌ها با انیمیشن هنگام ورود به دید
+// انیمیشن هنگام ورود کارت‌ها به دید
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('in-view');
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.card').forEach(el => observer.observe(el));
+// اعمال به کارت‌ها
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(card);
+  });
+});
 
-// ---------------------------------------------------------------
-// Certificates Filtering
+// Certificates
 const filterBtns = document.querySelectorAll('.filter-btn');
 const certCards = document.querySelectorAll('.cert-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Reset active state
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
     const filter = btn.dataset.filter;
-
-    // Show/hide cards based on filter
     certCards.forEach(card => {
       card.style.display = (filter === 'all' || card.dataset.platform === filter) ? 'block' : 'none';
     });
@@ -49,43 +55,29 @@ function scrollLoop() {
   requestAnimationFrame(scrollLoop);
 }
 
-// Start scrolling with given speed
-function startScroll(speed) {
-  scrollSpeed = speed;
-  if (!isScrolling) {
-    isScrolling = true;
-    requestAnimationFrame(scrollLoop);
-  }
+function startScroll(speed, delay) {
+  clearInterval(scrollInterval);
+  scrollInterval = setInterval(() => {
+    carousel?.scrollBy({ left: speed, behavior: 'smooth' });
+  }, delay);
 }
 
-// Stop scrolling
 function stopScroll() {
-  isScrolling = false;
-  scrollSpeed = 0;
+  clearInterval(scrollInterval);
 }
 
-// Play (normal speed)
-document.querySelector('.play').addEventListener('click', () => {
-  startScroll(2); // scroll 2px per frame
+document.querySelector('.play')?.addEventListener('click', () => startScroll(2, 30));
+document.querySelector('.slow')?.addEventListener('click', () => startScroll(1, 60));
+document.querySelector('.fast')?.addEventListener('click', () => startScroll(4, 20));
+
+carousel?.addEventListener('mouseenter', stopScroll);
+carousel?.addEventListener('mouseleave', stopScroll);
+
+// Form submission
+document.querySelector('.contact')?.addEventListener('submit', (e) => {
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = 'Wird gesendet...';
+  btn.disabled = true;
 });
 
-// Slow Down
-document.querySelector('.slow').addEventListener('click', () => {
-  startScroll(1); // scroll 1px per frame
-});
 
-// Speed Up
-document.querySelector('.fast').addEventListener('click', () => {
-  startScroll(4); // scroll 4px per frame
-});
-
-// Optional Stop button (if you add one in HTML)
-const stopBtn = document.querySelector('.stop');
-if (stopBtn) {
-  stopBtn.addEventListener('click', stopScroll);
-}
-
-// Also stop when user manually scrolls with mouse/touch
-carousel.addEventListener('wheel', stopScroll);
-carousel.addEventListener('touchstart', stopScroll);
-// ----------------------------------------------------------------------------

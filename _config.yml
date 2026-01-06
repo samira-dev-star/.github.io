@@ -1,0 +1,148 @@
+# ==================== SITE IDENTITY ====================
+title: "Samira Mashti Zadeh"
+tagline: "Full-Stack Developer | 3D Animator | AI Enthusiast"
+description: "A professional portfolio showcasing software development projects, 3D animations, and certifications in programming and computer science."
+author: "Samira Mashti Zadeh"
+logo: "/images/main/favicon.png"
+favicon: "/images/main/favicon.png"
+
+# ==================== SITE URL ====================
+url: "https://samira-dev-star.github.io"
+baseurl: "" # Leave empty for root deployment
+
+# ==================== LANGUAGE & ENCODING ====================
+locale: "de_DE"
+encoding: "UTF-8"
+lang: "de"
+
+# ==================== BUILD CONFIGURATION ====================
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: Europe/Berlin
+
+# ==================== EXCLUDE FROM BUILD ====================
+exclude:
+  - "README.md"
+  - "LICENSE"
+  - "node_modules"
+  - "vendor"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "*.log"
+  - ".gitignore"
+  - ".github"
+  - "package.json"
+  - "package-lock.json"
+  - "yarn.lock"
+  - "webpack.config.js"
+  - "gulpfile.js"
+  - "Gruntfile.js"
+  - "_drafts"
+  - "_cache"
+
+# ==================== INCLUDE STATIC ASSETS ====================
+include:
+  - "videos"
+  - "images"
+  - "js"
+  - "css"
+  - "fonts"
+  - "robots.txt"
+
+# ==================== GITHUB METADATA ====================
+github:
+  username: "samira-dev-star"
+  repository: "samira-dev-star.github.io"
+  source_branch: "main"
+
+# ==================== SOCIAL LINKS ====================
+social:
+  github: "https://github.com/samira-dev-star"
+  linkedin: "" # Add your LinkedIn URL here
+  email: "mailto:samira@example.com" # Update with your real email
+  twitter: "" # Optional
+  instagram: "" # Optional
+
+# ==================== PLUGINS ====================
+# GitHub Pages supported plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+
+# ==================== SEO & SOCIAL MEDIA ====================
+twitter:
+  username: ""
+  card: summary_large_image
+
+# ==================== ANALYTICS (optional) ====================
+# google_analytics: "G-XXXXXXXXXX" # Uncomment and add your GA4 ID
+# google_site_verification: "" # Uncomment and add verification code
+
+# ==================== NAVIGATION ====================
+navigation:
+  - title: "Start"
+    url: "#hero"
+  - title: "Über mich"
+    url: "#about"
+  - title: "Animationen"
+    url: "#animations"
+  - title: "Projekte"
+    url: "#projects"
+  - title: "Zertifikate"
+    url: "#certs"
+  - title: "Kontakt"
+    url: "#contact"
+
+# ==================== PORTFOLIO CUSTOM VARIABLES ====================
+portfolio:
+  hero_title: "Visuelle Erlebnisse & sauberes Coding"
+  hero_subtitle: "Kombination aus Kreativität in Animation und Kompetenz in Softwareentwicklung."
+  about_text: "Leidenschaftlich für Animation und Programmierung. Mein Ziel ist es, kreative visuelle Erlebnisse mit solider Softwareentwicklung zu verbinden."
+
+# ==================== COLLECTIONS (if needed) ====================
+# collections:
+#   projects:
+#     output: true
+#     permalink: /:collection/:name/
+#   certificates:
+#     output: false
+
+# ==================== DEFAULTS ====================
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Samira Mashti Zadeh"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Samira Mashti Zadeh"
+
+# ==================== SASS/SCSS (if using) ====================
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# ==================== FUTURE POSTS ====================
+future: false
+
+# ==================== LIQUID ====================
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+# ==================== MINIFICATION (optional) ====================
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+  endings: all
+  ignore:
+    envs: [development]
