@@ -1950,3 +1950,71 @@ a {
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(169, 51, 255, 0.1);
 }
+
+
+/* ==================== استایل ریسپانسیو برای دکمه زبان ==================== */
+
+/* تبلت و موبایل بزرگ */
+@media (max-width: 768px) {
+  #langBtn {
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+    max-width: 100px !important;
+    white-space: nowrap !important;
+    border-width: 1px !important;
+    margin-left: 8px !important;
+  }
+
+  /* هاور ملایم‌تر برای دستگاه‌های لمسی */
+  #langBtn:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 6px 20px rgba(169, 51, 255, 0.2) !important;
+  }
+
+  /* غیرفعال کردن انیمیشن شimmer روی موبایل برای بهبود پرفورمنس */
+  #langBtn:hover::before {
+    animation: none !important;
+    opacity: 0.5 !important;
+  }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+  #langBtn {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    max-width: 85px !important;
+  }
+
+  /* تغییر متن دکمه برای صرفه‌جویی فضا */
+  #langBtn::after {
+    content: attr(data-lang) !important;
+    font-size: 0.7rem;
+    margin-right: 2px;
+  }
+
+  /* حذف آیکون 🌐 برای فضای بیشتر */
+  #langBtn .flag-icon {
+    display: none !important;
+  }
+}
+
+/* موبایل خیلی کوچک (آیفون SE و مشابه) */
+@media (max-width: 375px) {
+  .nav {
+    padding: 12px 16px !important;
+  }
+
+  #langBtn {
+    margin-left: 4px !important;
+    padding: 5px 10px !important;
+    max-width: 75px !important;
+  }
+}
+
+/* تبلت افقی - بهبود فاصله‌گذاری */
+@media (min-width: 769px) and (max-width: 992px) {
+  #langBtn {
+    margin-left: 12px !important;
+  }
+}
